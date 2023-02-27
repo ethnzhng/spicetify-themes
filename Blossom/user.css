@@ -5,6 +5,86 @@
     background-color: var(--spice-background);
 }
 
+/* Hide fullscreen button bc plugin has own button */
+.control-button[title="Full screen"] {
+    display: none;
+}
+
+/*
+-------------------
+MAIN VIEW
+-------------------
+*/
+.Root__main-view {
+  background: none !important;
+}
+[fade="bottom"] {
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 80%, transparent 100%);
+}
+[fade="top"] {
+  -webkit-mask-image: linear-gradient(transparent 10%, rgba(0, 0, 0, 1) 30%);
+}
+[fade="full"] {
+  -webkit-mask-image: linear-gradient(transparent 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 80%, transparent 100%);
+}
+.main-home-homeHeader {
+  display: none;
+}
+.fSKBdxsPEB5WUAJWTYlh {
+  background: transparent;
+}
+.main-trackList-playingIcon {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='playing-icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 24'%3E%3Cdefs%3E%3Cstyle%3E %23playing-icon %7B fill: %2320BC54; %7D @keyframes play %7B 0%25 %7Btransform: scaleY(1);%7D 3.3%25 %7Btransform: scaleY(0.9583);%7D 6.6%25 %7Btransform: scaleY(0.9166);%7D 9.9%25 %7Btransform: scaleY(0.8333);%7D 13.3%25 %7Btransform: scaleY(0.7083);%7D 16.6%25 %7Btransform: scaleY(0.5416);%7D 19.9%25 %7Btransform: scaleY(0.4166);%7D 23.3%25 %7Btransform: scaleY(0.25);%7D 26.6%25 %7Btransform: scaleY(0.1666);%7D 29.9%25 %7Btransform: scaleY(0.125);%7D 33.3%25 %7Btransform: scaleY(0.125);%7D 36.6%25 %7Btransform: scaleY(0.1666);%7D 39.9%25 %7Btransform: scaleY(0.1666);%7D 43.3%25 %7Btransform: scaleY(0.2083);%7D 46.6%25 %7Btransform: scaleY(0.2916);%7D 49.9%25 %7Btransform: scaleY(0.375);%7D 53.3%25 %7Btransform: scaleY(0.5);%7D 56.6%25 %7Btransform: scaleY(0.5833);%7D 59.9%25 %7Btransform: scaleY(0.625);%7D 63.3%25 %7Btransform: scaleY(0.6666);%7D 66.6%25 %7Btransform: scaleY(0.6666);%7D 69.9%25 %7Btransform: scaleY(0.6666);%7D 73.3%25 %7Btransform: scaleY(0.6666);%7D 76.6%25 %7Btransform: scaleY(0.7083);%7D 79.9%25 %7Btransform: scaleY(0.75);%7D 83.3%25 %7Btransform: scaleY(0.8333);%7D 86.6%25 %7Btransform: scaleY(0.875);%7D 89.9%25 %7Btransform: scaleY(0.9166);%7D 93.3%25 %7Btransform: scaleY(0.9583);%7D 96.6%25 %7Btransform: scaleY(1);%7D %7D %23bar1 %7B transform-origin: bottom; animation: play 0.9s -0.51s infinite; %7D %23bar2 %7B transform-origin: bottom; animation: play 0.9s infinite; %7D %23bar3 %7B transform-origin: bottom; animation: play 0.9s -0.15s infinite; %7D %23bar4 %7B transform-origin: bottom; animation: play 0.9s -0.75s infinite; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Eplaying-icon%3C/title%3E%3Crect id='bar1' class='cls-1' width='4' height='24'/%3E%3Crect id='bar2' class='cls-1' x='6' width='4' height='24'/%3E%3Crect id='bar3' class='cls-1' x='12' width='4' height='24'/%3E%3Crect id='bar4' class='cls-1' x='18' width='4' height='24'/%3E%3C/svg%3E");
+  background: var(--spice-text);
+  content-visibility: hidden;
+  -webkit-mask-repeat: no-repeat;
+}
+.main-trackList-trackListRow:focus-within,
+.main-trackList-trackListRow:hover {
+  background: linear-gradient(90deg, transparent 0%, rgba(var(--spice-rgb-selected-row), 0.07) 30%, rgba(var(--spice-rgb-selected-row), 0.07) 60%, transparent 100%);
+}
+.main-trackList-trackListRow.main-trackList-selected,
+.main-trackList-trackListRow.main-trackList-selected:hover {
+  background: linear-gradient(90deg, transparent 0%, rgba(var(--spice-rgb-selected-row), 0.07) 30%, rgba(var(--spice-rgb-selected-row), 0.07) 60%, transparent 100%);
+}
+.main-card-card .main-card-imageContainer {
+  transition: transform 0.35s ease;
+  transform-origin: 50% -40px;
+}
+.main-card-card:hover .main-card-imageContainer {
+  transform: perspective(75em) rotateX(10deg);
+}
+/* .main-card-card {
+  background: rgba(0, 0, 0, 0.3) !important;
+} */
+.marketplace-header__left {
+  position: absolute !important;
+  left: 0 !important;
+}
+.view-homeShortcutsGrid-shortcut {
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+.main-cardImage-imageWrapper {
+  overflow: hidden;
+}
+.main-card-imageContainer .main-cardImage-imageWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg) translate(0px, -90%);
+  transition: all 0.3s ease-out;
+  filter: blur(4px);
+}
+.main-card-card:hover .main-card-imageContainer .main-cardImage-imageWrapper::after {
+  transform: rotate(45deg) translate(0px, -70%);
+  filter: blur(6px);
+}
+
+
 /* SEARCH */
 .main-yourEpisodes-episodeCard {
     background-color: red;
@@ -26,23 +106,23 @@
 
 .EvQHNTBhaU3rGCRRlAWj {
     background: unset !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     mask: linear-gradient(to bottom, #212121, 60%, transparent);
-    transition: all 1s;
+    transition: all 0.6s;
 }
 
 .QplCuuGSoV4updqTSLq9 {
     background: unset !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     mask: linear-gradient(to bottom, #212121, 60%, transparent);
-    transition: all 1s;
+    transition: all 0.6s;
 }
 
 .main-trackList-trackListHeaderStuck {
     background: unset !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     mask: linear-gradient(to bottom, #212121, 60%, transparent);
-    transition: all 1s;
+    transition: all 0.6s;
 }
 
 /* Home Header, when on home tab */
@@ -54,24 +134,24 @@
 
 .cover-art {
     background: var(--spice-background);
-    border-radius: 7.5%;
+    border-radius: 3.5%;
 }
 .cover-art-image {
-    border-radius: 7.5%;
+    border-radius: 3.5%;
     transition: all 0.5s;
     cursor: pointer;
 }
 
 /* Album or song art */
 .main-entityHeader-image {
-    border-radius: 10%;
+    border-radius: 3.5%;
     opacity: 100;
     animation: both;
     cursor: pointer;
 }
 
 .main-editImageButton-overlay {
-    border-radius: 10%;
+    border-radius: 3.5%;
     background: unset;
     backdrop-filter: blur(4px);
     color: var(--spice-button);
@@ -102,6 +182,15 @@
 }
 
 /* Playback bar and controls */
+
+#fs-button {
+  bottom:-2px
+}
+
+#fs-button > svg {
+  height:18px
+}
+
 .main-nowPlayingBar-nowPlayingBar {
     background-color: unset !important;
     background: unset !important;
@@ -111,23 +200,28 @@
 
 .main-playPauseButton-button {
     background: var(--spice-button-active);
-    color: var(--spice-text);
+    color: var(--spice-player);
 }
 
 /* TopBar, where the profile button and back and ford buttons are */
 .main-topBar-background {
-    opacity: 10%;
+/*     opacity: 20%;
     background: linear-gradient(180deg, #171717, 60%, transparent) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     mask: linear-gradient(to bottom, #212121, 60%, transparent);
-    transition: all 1s;
+    transition: all 0.6s; */
+
+    background: unset !important;
+    backdrop-filter: blur(10px);
+    mask: linear-gradient(to bottom, #212121, 60%, transparent);
+    transition: all 0.6s;
 }
 
 .main-topBar-overlay {
     background: unset !important;
     background-color: unset !important;
     background-image: unset !important;
-    /* backdrop-filter: blur(10px); */
+    backdrop-filter: blur(10px);
 }
 
 .main-navBar-navBarLinkActive,
@@ -183,24 +277,24 @@
 }
 
 .main-rootlist-rootlist {
-    background-color: var(--spice-player);
-    top: 10px;
+    background-color: var(--spice-playlists);
+    /* top: 10px; */
 }
 .main-rootlist-rootlistItem {
     cursor: pointer;
     margin: 0px;
     transition: all 0.5s;
 }
+
 .main-rootlist-rootlistItem:hover {
-    background: var(--spice-background) !important;
-    margin: 5px;
-    padding: 5px;
+    background: linear-gradient(90deg, transparent 0%, rgba(var(--spice-rgb-selected-row), 0.07) 30%, rgba(var(--spice-rgb-selected-row), 0.07) 60%, transparent 100%);
+    margin-left: 8px;
     transition: all 0.5s;
 }
 .main-rootlist-rootlistItemLinkActive {
-    background: var(--spice-background) !important;
-    margin-left: -22px;
-    margin-right: -10px;
+    background: linear-gradient(90deg, transparent 0%, rgba(var(--spice-rgb-selected-row), 0.07) 30%, rgba(var(--spice-rgb-selected-row), 0.07) 60%, transparent 100%);
+    margin-left: -60px;
+    margin-right: -60px;
     padding-left: 30px;
     transition: all 0.5s;
 }
